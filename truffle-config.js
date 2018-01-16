@@ -1,5 +1,7 @@
 require('dotenv').config();
-require('babel-register');
+require('babel-register')({
+  ignore: /node_modules\/(?!(token-test-suite))/
+});
 require('babel-polyfill');
 
 const HDWalletProvider = require('truffle-hdwallet-provider');
